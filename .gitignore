@@ -13,9 +13,6 @@
 
 
 
-/config/secrets.yml
-/config/credentials.yml.enc
-/config/master.key
 #/config/database.yml
 
 # Ignore Node.js dependencies
