@@ -1,0 +1,131 @@
+.NavBarPat {
+  height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: #70a5d7;
+    padding: 10px;
+    color: white;
+    min-height: 100vh;
+    width: 200px; /* Set a fixed width for the navbar */
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    border-bottom-right-radius: 20px;
+    box-shadow: 0 5px 10px rgba(1, 1, 1, 0.15);
+    transition: width 0.3s ease-in-out; /* Add transition for smooth resizing */
+  }
+
+  .navigationPat {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    margin-top: 20px;
+  }
+
+  .navigationPat a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    position: relative;
+  }
+
+  .navigationPat a:before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background-color: #38acec;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .navigationPat a:hover:before {
+    width: 100%;
+  }
+
+  .navigationPat a:hover {
+    color: white;
+  }
+
+  .notificationsButton {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    height: 40px;
+    width: 70px;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.12);
+    transition: right 0.2s ease-in-out;
+  }
+
+  .notificationsButton.closed {
+    right: 65px;
+  }
+
+  .notificationsButton img {
+    height: 24px;
+    width: 24px;
+  }
+
+  .notificationsBadge {
+    position: absolute;
+    top: 11px;
+    right: 11px;
+    height: 14px;
+    min-width: 14px;
+    padding: 2px;
+    border-radius: 6px;
+    background-color: red;
+    color: white;
+    font-size: 10px;
+    text-align: center;
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .NavBarPat {
+      width: 200px; /* Set the width to the same fixed width as in desktop mode */
+      padding: 10px 20px; /* Add some padding to the navbar */
+    }
+
+    .navigationPat a {
+      color: white;
+      font-size: 16px;
+      padding-left: 10px;
+    }
+
+    .notificationsButton {
+      top: 20px;
+    }
+
+    /* Additional styles for content area */
+    .content {
+      margin-left: 0px; /* Adjust the value based on your navbar width */
+      padding: 20px;
+    }
+  }
+
+  /* Extra Small Devices (Portrait) */
+  @media (max-width: 576px) {
+    .NavBarPat {
+      width: 100px; /* Set the width to the same fixed width as in desktop mode */
+      padding: 10px; /* Add some padding to the navbar */
+    }
+
+    .navigationPat a {
+      font-size: 14px; /* Decrease the font size for smaller screens */
+      padding-left: 0; /* Remove the padding-left */
+    }
+
+    /* Additional styles for content area */
+    .content {
+      margin-left: 0px; /* Adjust the value based on your navbar width */
+      padding: 10px;
+    }
+  }

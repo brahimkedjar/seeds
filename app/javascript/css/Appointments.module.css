@@ -1,0 +1,45 @@
+
+.root2{
+  background-color: transparent;
+}
+.Appointments {
+
+    background-image: url("../img/AppointmentsPage.png");
+    background-size: cover;
+    background-position: center;
+  }
+
+  .Calendar {
+    background-image: url(../img/cal.png);
+    background-size: contain;
+    background-position: center;
+  }
+
+  /* Appointments list styles */
+  .appoint {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem;
+    justify-items: center;
+    align-items: start;
+    margin-top: 2rem;
+  }
+
+  /* Responsive styles */
+  @media (max-width: 768px ) {
+    .appoint {
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+  }
+
+  /* Title styles */
+  .titlefn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 3rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }

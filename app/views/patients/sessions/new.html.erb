@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Log in Patients</title>
+  <style>
+    .card {
+      max-width: 500px;
+      margin: 50px auto;
+      box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .card-header {
+      background-color: #70a5d7;
+      border-color:#70a5d7;
+
+      color: #fff;
+      padding: 20px;
+    }
+
+    .card-body {
+      padding: 20px;
+    }
+
+    .form-group label {
+      font-weight: bold;
+    }
+
+    .form-group .form-control {
+      border-radius: 0;
+    }
+.card-title {
+  font-size: 25px;
+  margin: 0;
+}
+    .btn-primary {
+            background-color: #70a5d7;
+border-color:#70a5d7;
+      border-radius: 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <div class="card-header">
+        <h4 class="card-title mb-0">Connectez-vous</h4>
+      </div>
+      <div class="card-body">
+        <%= form_for(resource, as: resource_name, url: session_path(resource_name), html: { class: 'needs-validation', novalidate: true }) do |f| %>
+          <div class="form-group mb-3">
+            <%= f.label :email, class: "form-label" %>
+            <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control", required: true %>
+          </div>
+          <div class="form-group mb-3">
+            <%= f.label :password, "Mot de passe", class: "form-label" %>
+            <%= f.password_field :password, autocomplete: "current-password", class: "form-control", required: true %>
+          </div>
+          <% if devise_mapping.rememberable? %>
+            <div class="form-check mb-3">
+              <%= f.check_box :remember_me, class: "form-check-input" %>
+              <%= f.label :remember_me, "Rester connecté", class: "form-check-label" %>
+            </div>
+          <% end %>
+          <div class="d-grid">
+            <%= f.submit "Se connecter", class: "btn btn-primary" %>
+          </div>
+        <% end %>
+                <%= render "patients/shared/links" %>
+
+      </div>
+    </div>
+  </div>
+</body>
+</html>

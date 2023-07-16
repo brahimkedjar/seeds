@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <%= stylesheet_link_tag 'home', media: 'all' %>
+      <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+
+
+<style>
+  @keyframes flameAnimation {
+  0% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.5; transform: scale(1.2); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+.chatbot-icon-img {
+  position: relative;
+}
+
+.flame {
+  position: absolute;
+  top: -50px;
+  left: -10px;
+  width: 50px;
+  height: 50px;
+  animation: flameAnimation 2s infinite;
+  transform-origin: center bottom;
+}
+
+.flame:before,
+.flame:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 40px;
+  height: 30px;
+  background-color: #ff0000;
+  border-radius: 50%;
+  transform-origin: center bottom;
+}
+
+.flame:before {
+  left: 0;
+  transform: rotate(-45deg);
+}
+
+.flame:after {
+  right: 0;
+  transform: rotate(45deg);
+}
+</style>
+
+    <title>Home</title>
+
+
+  </head>
+  <body>
+
+<div class="Home">
+    <div class="landing10">
+      <div class="intro-text10">
+        <h1 class="google-font">Bienvenue dans Sihati</h1>
+        <p class="break-lines">Inscrivez-vous sur l'application,<br>demandez un medecin où que vous soyez<br>et avoir des soins de santé de bonne qualité.</p>
+          <button class="connexion-btn11">
+<%= link_to "Rejoignez-Nous", "#rejoignez-nous", class: "button-link11", id: "rejoignez-nous-link" %>
+          </button>
+      </div>
+      <%= image_tag('samy.png', alt: 'Doctor') %>
+    </div>
+
+
+<!-- Add the necessary HTML structure -->
+    <div class="chatbot-container <%= @is_chat_open ? 'open' : '' %>">
+      <div class="chatbot-messages">
+        <% @messages.each_with_index do |message, index| %>
+          <div class="message message-<%= message[:role] %>">
+            <%= message[:content] %>
+          </div>
+        <% end %>
+      </div>
+      <div class="chatbot-input">
+        <input type="text" id="inputValue" class="input" placeholder="Type a message...">
+        <button onclick="sendMessage()" class="send-button">Send</button>
+      </div>
+    </div>
+    <div class="chatbot-icon" onclick="toggleChat()">
+      <img src="https://www.techopedia.com/wp-content/uploads/2023/03/6e13a6b3-28b6-454a-bef3-92d3d5529007.jpeg" alt="Chatbot" class="chatbot-icon-img">
+  </div>
+
+
+
+  <section>
+    <h2 id="Nous-services" class="title">Nos-services</h2>
+    <div class="content">
+      <div class="cardhome">
+        <div class="iconhome">
+          <i class="fa-solid fa-user-doctor"></i>
+        </div>
+        <div class="info">
+          <h3>Trouver un médecin</h3>
+          <p>Vous pouvez rechercher le médecin dont vous avez besoin dans votre région ou dans toute autre région</p>
+        </div>
+      </div>
+      <div class="cardhome">
+        <div class="iconhome">
+          <i class="fa-solid fa-calendar-check"></i>
+        </div>
+        <div class="info">
+          <h3>prise de rendez-vous</h3>
+          <p>Vous pouvez prendre rendez-vous avec le médecin</p>
+        </div>
+      </div>
+      <div class="cardhome">
+        <div class="iconhome">
+          <i class="fa-solid fa-truck-medical"></i>
+        </div>
+        <div class="info">
+          <h3>médecins de transfert</h3>
+          <p>Les médecins disponibles dans votre région seront informés de votre demande et pourront y venir à le plus proche centre de santé.</p>
+        </div>
+      </div>
+
+</div>
+
+<!-- Add the necessary JavaScript code -->
+
+    </div>
+  </section>
+
+ <h2 id="rejoignez-nous" class="title">Rejoignez-Nous</h2>
+
+<a href="<%= new_doctor_session_path %>" style="text-decoration: none;">
+
+<div class="cards-container10">
+  <div class="card10">
+    <%= image_tag('p8.png', alt: 'Doctor') %>
+    <div class="card-content">
+      <h3 class="card-title" style="color: grey;">Doctor</h3>
+      <div class="card-buttons10">
+      </div>
+    </div>
+  </div>
+</a>
+<a href="<%= new_patient_session_path %>" style="text-decoration: none;">
+  <div class="card10">
+    <%= image_tag('p1.png', alt: 'Patient') %>
+    <div class="card-content">
+      <h3 class="card-title" style="color:grey;">Patient</h3>
+      <div class="card-buttons10">
+      </div>
+    </div>
+  </div>
+</a>
+
+
+</div>
+
+
+  <footer class="footer">
+    <p class="footer-title">Copyrights @ <span>SIHATI</span></p>
+    <div class="social-icons">
+      <a href="/"><i class="fab fa-linkedin"></i></a>
+      <a href="/"><i class="fab fa-twitter"></i></a>
+      <a href="/"><i class="fab fa-instagram"></i></a>
+      <a href="/"><i class="fab fa-youtube"></i></a>
+    </div>
+  </footer>
+</div>
+    </div>
+  </body>
+</html>

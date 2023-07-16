@@ -1,0 +1,94 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ *= require 'leaflet'
+ */
+
+/* Change the background color of the toast container */
+.toast {
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 16px;
+  position: fixed;
+  top: 50px; /* Adjust the top position as needed */
+  right: 20px; /* Adjust the right position as needed */
+  max-width: 300px; /* Adjust the maximum width as needed */
+  z-index: 9999;
+}
+.toast-error {
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 16px;
+  position: fixed;
+  top: 50px; /* Adjust the top position as needed */
+  right: 20px; /* Adjust the right position as needed */
+  max-width: 300px; /* Adjust the maximum width as needed */
+  z-index: 9999;
+}
+.toast-message{
+  color: black;
+
+}
+#toast-container {
+  background-color: #f8f9fa !important;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 16px;
+}
+
+.toast-success {
+  background-color: #d4edda !important;
+  border-color: #c3e6cb;
+  color: #155724;
+}
+
+.toast-warning {
+  background-color: #fff3cd !important;
+  border-color: #ffeeba;
+  color: #856404;
+}
+
+.toast-error {
+  background-color: #f8d7da !important;
+  border-color: #f5c6cb;
+  color: #ee2136;
+}
+
+.toast-info {
+  background-color: #d1ecf1 !important;
+  border-color: #bee5eb;
+  color: #0c5460;
+}
+
+/* Customize scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  background-color: #f5f5f5;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+}
+
+/*
+ *= require https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css
+ *= require https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css
+ *= require https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css
+ */

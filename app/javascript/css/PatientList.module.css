@@ -1,0 +1,124 @@
+
+.PatientPageGroup {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-image: url("../img/img.jpg");
+    background-size: contain;
+}
+
+.pascont {
+    width: 99%;
+    margin: 10px;
+    box-shadow: 0 5px 25px rgba(1, 1, 1, 0.15);
+}
+
+.PatientList {
+  background:' grey';
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+.cardpat {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #fff;
+    width: 20em;
+    box-shadow: 0 5px 25px rgba(1, 1, 1, 0.15);
+    border-radius: 10px;
+    padding: 25px;
+    margin: 15px;
+    transition: 0.7s ease;
+}
+
+
+.send{
+    text-align: center;
+    width: 25%;
+    background-color: #3a6cf4;
+    color: white;
+    font-weight: bold;
+    padding: 2px;
+    border-radius: 10px;
+    margin: 10px 20px;
+    border: none;
+}
+
+.titlepl{
+    display: flex;
+    justify-content: center;
+    color: #3a6cf4;
+    font-size: 2em;
+    font-weight: 800;
+    margin-bottom: 30px;
+    background-color: white;
+}
+
+.annons {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #e6ebff;
+    border-radius: 10px;
+}
+
+.annons form {
+    display: flex;
+    flex-direction: column;
+}
+.ans {
+    text-align: center;
+    font-weight: bold;
+    margin: 10px;
+}
+
+.annons form div{
+    text-align: center;
+    font-weight: 500;
+    margin: 5px;
+}
+
+.annons form select{
+    text-align: center;
+    margin: 5px;
+}
+
+.annons form .submit{
+    text-align: center;
+    width: 15%;
+    background-color: #3a6cf4;
+    color: white;
+    font-weight: bold;
+    padding: 2px;
+    border-radius: 10px;
+    margin: auto;
+    border: none;
+}
+
+.annons form .submit:hover {
+    background-color: blue;
+  }
+
+.annons form #km {
+    text-align: center;
+    width: 15%;
+    font-weight: bold;
+    padding: 2px;
+    border-radius: 10px;
+    margin: auto;
+    border: none;
+}
+
+@media (max-width: 768px ) {
+    .annons {
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+    }
+  }
+

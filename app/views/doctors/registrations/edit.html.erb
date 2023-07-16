@@ -1,0 +1,30 @@
+<h2>Edit Doctor</h2>
+
+<%= form_for(resource, as: resource, url: registration_path(resource)) do |f| %>
+  <%= devise_error_messages! %>
+
+  <%= f.hidden_field :role, value: 0 %>
+
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+
+  <%= f.label :email %>
+  <%= f.email_field :email %>
+
+  <%= f.label :specialite %>
+  <%= f.select :specialite %>
+
+  <%= f.label :selected_wilaya %>
+  <%= f.select :selected_wilaya %>
+
+  <%= f.label :password %>
+  <%= f.password_field :password %>
+
+  <%= f.label :password_confirmation %>
+  <%= f.password_field :password_confirmation %>
+
+  <%= f.label :current_password %>
+  <%= f.password_field :current_password %>
+
+  <%= f.submit "Update" %>
+<% end %>

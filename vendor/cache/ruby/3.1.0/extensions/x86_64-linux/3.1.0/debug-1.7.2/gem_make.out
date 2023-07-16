@@ -1,0 +1,16 @@
+current directory: /var/www/myapp1/sihati_final/vendor/cache/ruby/3.1.0/gems/debug-1.7.2/ext/debug
+/usr/bin/ruby3.1 -I /usr/lib/ruby/vendor_ruby -r ./siteconf20230622-35724-5powk4.rb extconf.rb
+creating Makefile
+
+current directory: /var/www/myapp1/sihati_final/vendor/cache/ruby/3.1.0/gems/debug-1.7.2/ext/debug
+make DESTDIR\= clean
+
+current directory: /var/www/myapp1/sihati_final/vendor/cache/ruby/3.1.0/gems/debug-1.7.2/ext/debug
+make DESTDIR\=
+compiling debug.c
+compiling iseq_collector.c
+linking shared-object debug/debug.so
+
+current directory: /var/www/myapp1/sihati_final/vendor/cache/ruby/3.1.0/gems/debug-1.7.2/ext/debug
+make DESTDIR\= install
+/usr/bin/install -c -m 0755 debug.so ./.gem.20230622-35724-csi859/debug

@@ -1,0 +1,138 @@
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  height: 100vh;
+}
+
+.profile {
+  display: flex;
+  flex-wrap: wrap;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.3);
+  background-color: #fff;
+}
+
+.image {
+  width: 40%;
+  height: 400px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.image img {
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 20px;
+  object-fit: cover;
+  box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.3);
+  transition: transform 0.5s ease-in-out;
+}
+
+.image:hover img {
+  transform: scale(1.1);
+}
+
+.info {
+  width: 60%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+}
+
+.info h2 {
+  margin: 0 0 20px;
+  font-size: 2.3rem;
+  font-weight: 600;
+  color: #333;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.1);
+}
+
+.info div {
+  margin-bottom: 10px;
+  color: #555;
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+
+.info div .label {
+  font-weight: bold;
+  color: #888;
+  margin-right: 10px;
+}
+
+.buttoncontainer {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
+}
+
+.modify {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #70a5d7;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.2s ease-in;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.modify:hover {
+  background-color: #537b8a;
+}
+
+.delete {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ff6f69;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.2s ease-in;
+  margin-left: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.delete:hover {
+  background-color: #c94c4c;
+}
+
+@media only screen and (max-width: 768px) {
+  .profile {
+    flex-direction: column;
+  }
+
+  .image {
+    width: 100%;
+    height: auto;
+  }
+
+  .info {
+    width: 100%;
+    margin-top: 20px;
+  }
+}

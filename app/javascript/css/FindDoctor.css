@@ -1,0 +1,271 @@
+
+@keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+.form1{
+  display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 16px;
+}
+
+.table th,
+.table td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.delete-btn {
+  padding: 8px 16px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #ff0000;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+
+
+
+.FindDoctor {
+  margin-top: 60px;
+    animation: fade-in 1s ease-out;
+background-color: transparent;
+  padding: 40px;
+  min-height: 100vh;
+  position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .annons {
+    width: 100%;
+    max-width: 500px;
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    border: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .annons .title {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .annons .content {
+    width: 100%;
+    margin-bottom: 20px;
+    font-size: 16px;
+    text-align: justify;
+    line-height: 1.5;
+  }
+
+  .annons .button {
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #007bff;
+    border-radius: 5px;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .annons .button:hover {
+    background-color: #0069d9;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
+  }
+
+  .ans {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+
+  select {
+    font-size: 16px;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: #f5f5f5;
+    box-shadow: inset 0px 2px 5px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+  }
+
+  select:focus {
+    outline: none;
+    box-shadow: 0px 0px 2px 2px #5b86e5;
+  }
+
+  .selectcontainer {
+    margin-bottom: 20px;
+    padding: 10px;
+  }
+
+  .selectcontainer select {
+    font-size: 16px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    width: 100%;
+    margin-bottom: 15px;
+  }
+
+  .selectcontainer:before {
+    content: "\f107";
+    font-family: "Font Awesome 5 Free";
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    font-size: 16px;
+    color: #666;
+  }
+
+
+
+  label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+  }
+
+
+
+  .submit1 {
+    width: 30%;
+    height: 35px;
+    font-size: 16px;
+    border-radius: 5px;
+    background-color: #70A5D7;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .submit1:hover {
+    background-color: #0069d9;
+  }
+
+  .titlefn {
+    color: #40b8ff;
+    text-align: center;
+    font-size: 50px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+
+  .appoint {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 20px;
+  }
+
+  .cardfind {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+    width: 300px;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
+    transition: box-shadow 0.3s ease;
+    cursor: pointer;
+    background-color: #fff;
+  }
+
+  .cardfind:hover {
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3);
+  }
+
+  .image {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  .image img {
+    max-width: 100%;
+    max-height: 200px;
+  }
+
+  .info {
+    text-align: center;
+  }
+
+  h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+
+  .noappo {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 50px;
+  }
+
+
+
+  @media screen and (max-width: 768px) {
+    .FindDoctor {
+      margin-left: 5%;
+      margin-top: 60px;
+      animation: fade-in 1s ease-out;
+      background-color: transparent;
+      padding: 40px;
+      min-height: 100vh;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .annons {
+      margin-left: 25%;
+
+    }
+    .appoint{
+      margin-left: 20%;
+
+    }
+
+
+  }
+
+
+
+
+
+
+
+
+
+

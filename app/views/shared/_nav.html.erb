@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Home</title>
+
+
+  </head>
+ <body>
+  <% if current_page?(root_path) %>
+<nav id="custom-navbar" class="navbar navbar-expand-lg navbar-light">
+  <div class="logo-container" style="display: flex; justify-content: center; align-items: center; width: 50px; height: 50px; border-radius: 50%; overflow: hidden; margin-right: 10px; margin-left: 60px;">
+    <%= image_tag('logoo-removebg-preview.png', alt: 'logo', class: 'logo', style: 'max-width: 100%; max-height: 100%;') %>
+  </div>
+  <%= link_to "Sihati", root_path, class: "navbar-brand text-center", style: "color: #70a5d7;" %>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+  </button>
+      <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+              <%= link_to "Contactez-nous","#contacte",class: "nav-link", id: "contact-link",style: "color: black;" %>
+          </li>
+          <li class="nav-item">
+            <%= link_to "Nos-services", "#Nous-services", class: "nav-link" , id: "Nous-services-link",style: "color: black;"%>
+          </li>
+        </ul>
+      </div>
+
+
+      <div class="secoond">
+        <ul class="navbar-nav">
+          <button class="connexion-btn12">
+<%= link_to "Rejoignez-Nous", "#rejoignez-nous", class: "button-link12", id: "rejoignez-nous-link" %>
+          </button>
+        </ul>
+      </div>
+
+    </nav>
+  <% else %>
+<nav id="custom-navbar" class="navbar navbar-expand-lg navbar-light">
+<div class="logo-container" style="display: flex; justify-content: center; align-items: center; width: 50px; height: 50px; border-radius: 50%; overflow: hidden; margin-right: 10px; margin-left: 10px;">
+    <%= image_tag('logo.png', alt: 'logo', class: 'logo', style: 'max-width: 100%; max-height: 100%;') %>
+  </div>
+  <%= link_to "Sihati", root_path, class: "navbar-brand text-center", style: "color: #70a5d7;" %>
+       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+              <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+
+
+        <ul class="navbar-nav">
+
+          <% if current_page?(new_doctor_registration_path)  %>
+            <li class="nav-item">
+              <%= link_to "Connexion", new_doctor_session_path, class: "nav-link", style: "color: black;" %>
+            </li>
+          <% elsif current_page?(new_patient_registration_path) %>
+            <li class="nav-item">
+              <%= link_to "Connexion", new_patient_session_path, class: "nav-link" , style: "color: black;"%>
+            </li>
+          <% end %>
+        </ul>
+        </div>
+    </nav>
+  <% end %>
+
+</body>
+</html>

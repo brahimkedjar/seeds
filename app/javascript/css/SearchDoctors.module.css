@@ -1,0 +1,256 @@
+* {
+  box-sizing: border-box;
+}
+
+/* Common Styles */
+
+.Doctors:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.Doctors hr {
+  border: 0;
+  height: 1px;
+  margin: 20px 0;
+}
+
+.Search {
+  margin-top: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.specialty {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.carddoc {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 30px;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.carddoc a {
+  text-decoration: none;
+}
+
+.carddoc h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.carddoc p {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.carddoc img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.carddoc img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+}
+
+.Doctors::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  opacity: 0.5;
+  filter: blur(15px);
+}
+
+.her {
+  width: 75%;
+  margin: 10px auto;
+  height: 5px;
+  background-color: white;
+}
+
+.search-bar-container {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+}
+
+.search-bar:focus {
+  background-color: #e0e0e0;
+}
+
+.search-icon {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  font-size: 20px;
+  color: #333;
+}
+
+.button-group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button {
+  padding: 10px 20px;
+  margin: 5px;
+  border: none;
+  border-radius: 30px;
+  background-color: #fff;
+  color: #70A5D7;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.button:hover {
+  background-color: #E6EBFF;
+  color: #601cfc;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.card {
+  width: 300px;
+  margin: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.3);
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.card h3 {
+  margin-top: 10px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+}
+
+.card p {
+  margin-top: 10px;
+  font-size: 16px;
+  color: #777;
+  line-height: 1.5;
+}
+
+.card span {
+  display: block;
+  margin-top: 10px;
+  font-size: 16px;
+  color: #333;
+  font-weight: bold;
+}
+
+/* Responsive Styles */
+
+@media (max-width: 768px) {
+  .Search {
+    margin-left: 15%;
+  }
+  .carddoc {
+    margin-left: 0;
+    grid-template-columns: 1fr;
+  }
+
+  .carddoc img {
+    height: 100%;
+  }
+
+  .NavBarPat {
+    width: 100%; /* Set the width to occupy the full screen */
+    padding: 10px 20px; /* Add some padding to the navbar */
+  }
+
+  .navigationPat a {
+    color: black;
+    font-size: 16px;
+    padding-left: 10px;
+  }
+
+  .notificationsButton {
+    top: 20px;
+  }
+
+  /* Additional styles for content area */
+  .content {
+    margin-left: 0; /* Remove the margin on the left */
+    padding: 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .Search {
+    margin-left: 1%;
+  }
+  .card-container {
+    padding: 10px;
+  }
+
+  .card {
+    width: calc(50% - 40px);
+  }
+
+  .NavBarPat {
+    width: 100%; /* Set the width to occupy the full screen */
+    padding: 10px 20px; /* Add some padding to the navbar */
+  }
+
+  .navigationPat a {
+    color: black;
+    font-size: 16px;
+    padding-left: 10px;
+  }
+
+  .notificationsButton {
+    top: 20px;
+  }
+
+  /* Additional styles for content area */
+  .content {
+    margin-left: 0; /* Remove the margin on the left */
+    padding: 20px;
+  }
+}

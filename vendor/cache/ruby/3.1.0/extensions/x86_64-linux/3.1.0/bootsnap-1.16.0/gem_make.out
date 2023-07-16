@@ -1,0 +1,15 @@
+current directory: /var/www/myapp1/sihati_final/vendor/cache/ruby/3.1.0/gems/bootsnap-1.16.0/ext/bootsnap
+/usr/bin/ruby3.1 -I /usr/lib/ruby/vendor_ruby -r ./siteconf20230622-35724-3r5p98.rb extconf.rb
+creating Makefile
+
+current directory: /var/www/myapp1/sihati_final/vendor/cache/ruby/3.1.0/gems/bootsnap-1.16.0/ext/bootsnap
+make DESTDIR\= clean
+
+current directory: /var/www/myapp1/sihati_final/vendor/cache/ruby/3.1.0/gems/bootsnap-1.16.0/ext/bootsnap
+make DESTDIR\=
+compiling bootsnap.c
+linking shared-object bootsnap/bootsnap.so
+
+current directory: /var/www/myapp1/sihati_final/vendor/cache/ruby/3.1.0/gems/bootsnap-1.16.0/ext/bootsnap
+make DESTDIR\= install
+/usr/bin/install -c -m 0755 bootsnap.so ./.gem.20230622-35724-u7rge8/bootsnap

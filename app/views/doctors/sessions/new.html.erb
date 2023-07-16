@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Log in Doctors</title>
+  <!-- Add Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <!-- Add custom CSS -->
+  <style>
+    .card {
+      max-width: 500px;
+    }
+    .card-header {
+  background-color: #70a5d7;
+      border-color:#70a5d7;
+        color: #ffffff;
+}
+
+.card-title {
+  font-size: 25px;
+  margin: 0;
+}
+.btn-primary {
+            background-color: #70a5d7;
+border-color:#70a5d7;
+      border-radius: 0;
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+  <div class="card mt-5 mx-auto">
+    <div class="card-header">
+      <h2 class="card-title m-0">Connectez-vous à votre compte</h2>
+    </div>
+    <div class="card-body">
+      <% if flash[:alert].present? %>
+        <div class="alert alert-danger" role="alert">
+          <%= flash[:alert] %>
+        </div>
+      <% end %>
+      <%= form_for(@doctor, as: :doctor, url: doctor_session_path) do |f| %>
+    <% if resource.errors.any? %>
+      <div class="alert alert-danger" role="alert">
+        <%= resource.errors.full_messages.join(', ') %>
+      </div>
+    <% end %>
+    <% unless resource.nil? %>
+      <div class="form-group">
+        <%= f.label :email, class: "font-weight-bold" %>
+        <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control", value: resource.email %>
+      </div>
+    <% end %>
+    <div class="form-group">
+      <%= f.label :password, "Mot de passe", class: "font-weight-bold" %>
+      <%= f.password_field :password, autocomplete: "current-password", class: "form-control" %>
+    </div>
+    <% if devise_mapping.rememberable? %>
+      <div class="form-check mb-3">
+        <%= f.check_box :remember_me, class: "form-check-input" %>
+        <%= f.label :remember_me, "Garder ma session active", class: "form-check-label" %>
+      </div>
+    <% end %>
+    <div class="form-group">
+      <%= f.submit "Se Connecter", class: "btn btn-primary btn-block" %>
+    </div>
+  <% end %>
+  <%= render "doctors/shared/links" %>
+</div>
+  </div>
+</div>
+</body>
+</html>
