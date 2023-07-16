@@ -33,12 +33,12 @@ test:
   database: db/test.sqlite3
 
 production:
+  <<: *default
   adapter: postgresql
   encoding: unicode
-  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  host: localhost
+  host: dpg-ch767erhp8u9bo5brscg-a
   port: 5432
-  database: db
-  username: postgres
-  password: crb12345
+  database: sihati
+  username: sihati_user
+  password: <%= ENV['SIHATI_DATABASE_PASSWORD'] %>
 
